@@ -1,0 +1,42 @@
+{
+  "data":[
+    {
+      "id": 1,
+      "img": "path/to/img",
+      "name": "Orange Cup",
+      "description": "This is a lovely cup that is lovely and is a cup.",
+      "likes": 0,
+      "dislikes": 0,
+      "favourite": false
+    },
+
+    {
+      "id": 2,
+      "img": "path/to/img",
+      "name": "Blue Cup",
+      "description": "This is a lovely cup that is lovely and is a cup.",
+      "likes": 0,
+      "dislikes": 0,
+      "favourite": true
+    },
+
+    {
+      "id": 3,
+      "img": "path/to/img",
+      "name": "Turquoise Cup",
+      "description": "This is a lovely cup that is lovely and is a cup.",
+      "likes": 0,
+      "dislikes": 0,
+      "favourite": false
+    },
+    {
+      "id": 4,
+      "img": "path/to/img",
+      "name": "Black Cup",
+      "description": "Spooky stuff right here I tell you that.",
+      "likes": 0,
+      "dislikes": 0,
+      "favourite": true
+    }
+  ]
+}
