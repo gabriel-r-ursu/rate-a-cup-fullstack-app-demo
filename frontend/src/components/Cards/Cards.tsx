@@ -1,14 +1,29 @@
 import $Cards from "../../styles/Cards/Cards";
 import Card from "./Card";
-
-const MOCK_DATA = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Cards: React.FC = (): JSX.Element => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios.get("/api").then((response) => {
+      setData(response.data);
+    });
+  }, []);
+
+  console.log(data);
   return (
     <$Cards>
-      {MOCK_DATA.map((card) => {
-        return <Card key={card} />;
-      })}
+      {data &&
+        data.map((item: { id: number; name: string; description: string }) => {
+          return (
+            <Card
+              key={item.id}
+              name={item.name}
+              description={item.description}
+            />
+          );
+        })}
     </$Cards>
   );
 };

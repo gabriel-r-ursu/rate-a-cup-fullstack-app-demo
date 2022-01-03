@@ -2,16 +2,18 @@ import $Card from "../../styles/Cards/Card";
 import $ImageContainer from "../../styles/Cards/ImageContainer";
 import $Buttons from "../../styles/Cards/Buttons";
 import $Span from "../../styles/shared/Span";
-import LogoImg from "../../assets/img/logo.png";
+import LogoImg from "../../logo.png";
+import CardInterface from "../../interfaces/CardInterface";
 
-const Card: React.FC = (): JSX.Element => {
+const Card: React.FC<CardInterface> = (props): JSX.Element => {
   return (
     <$Card>
       <$ImageContainer>
         <img src={LogoImg} alt="" />
       </$ImageContainer>
 
-      <$Span>This is a place for a short description for the cup above.</$Span>
+      <$Span>{props.name}</$Span>
+      <$Span>{props.description}</$Span>
       <$Buttons>
         <button>
           Like cup btn &nbsp;
